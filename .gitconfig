@@ -2,7 +2,7 @@
     url = https://github.com/anibali/docker-pytorch.git
     fetch = +refs/heads/*:refs/remotes/anibali/*
 [remote "github"]
-    url = https://github.com/huangyingw/docker-pytorch.git
+    url = git@github.com:huangyingw/docker-pytorch.git
     fetch = +refs/heads/*:refs/remotes/github/*
 [push]
     remote = github
@@ -10,7 +10,7 @@
     remote = anibali
     branch = master
 [merge]
-	allow = true
+    allow = true
 [branch "dev"]
     remote = github
     merge = refs/heads/dev
@@ -18,6 +18,6 @@
     remote = anibali
     merge = refs/heads/master
 [commit]
-	message = n
+    message = n
 [vrun]
     silent = false
