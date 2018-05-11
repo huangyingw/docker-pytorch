@@ -6,6 +6,7 @@
 "./cuda-7.5/Dockerfile"
 "./cuda-8.0/Dockerfile"
 "./cuda-9.1/Dockerfile"
+"./docker-compose.yml"
 "./includefile.conf"
 "./no-cuda/Dockerfile"
 "./prunefile.conf"

@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+    pytorch:
+        build:
+            context: ./cuda-9.1
+            dockerfile: Dockerfile
+        image: huangyingw/pytorch
+        volumes:
+            - ./var/logs/:/var/logs/
+        environment:
+            - FILENAME="~/.bashrc"
