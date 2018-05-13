@@ -12,7 +12,6 @@
 "./cuda-9.1/Dockerfile"
 "./cuda-9.1/entrypoint.sh"
 "./cuda-9.1/environment.yml"
-"./cuda-9.1/install_fastai.sh"
 "./deploy.list"
 "./deploy.sh"
 "./docker-compose.yml"

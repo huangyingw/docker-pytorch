@@ -3,6 +3,6 @@ SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
-source /home/user/miniconda/bin/activate fastai
+source activate fastai
 
 jupyter notebook
