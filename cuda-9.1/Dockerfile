@@ -33,7 +33,7 @@ ENV PATH=/home/user/miniconda/bin:$PATH
 
 # Create a Python 3.6 environment
 RUN /home/user/miniconda/bin/conda install conda-build \
-        && /home/user/miniconda/bin/conda create -y --name py36 python=3.6.4 \
+        && /home/user/miniconda/bin/conda create -y --name fastai python=3.6.4 \
         && /home/user/miniconda/bin/conda clean -ya
 ENV CONDA_DEFAULT_ENV=fastai
 ENV CONDA_PREFIX=/home/user/miniconda/envs/$CONDA_DEFAULT_ENV
@@ -82,10 +82,10 @@ RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
 RUN conda install -y -c menpo opencv3 \
         && conda clean -ya
 
-COPY ./install_fastai.sh /root/setup/
-COPY ./environment.yml /root/setup/
-COPY ./entrypoint.sh /entrypoint.sh
-RUN ./install_fastai.sh
+COPY ./environment.yml environment.yml
+COPY ./entrypoint.sh entrypoint.sh
+RUN conda env create -f environment.yml \
+        && conda env update
 
 # Set the default command to python3
 CMD ["python3"]

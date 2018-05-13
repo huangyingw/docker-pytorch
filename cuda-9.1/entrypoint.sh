@@ -3,4 +3,6 @@ SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
-jupyter notebook --allow-root
+source /home/user/miniconda/bin/activate fastai
+
+jupyter notebook
