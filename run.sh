@@ -3,4 +3,4 @@ SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
-nvidia-docker -f ./docker-compose.yml
+nvidia-docker-compose -f ./docker-compose.yml up --build --force-recreate
